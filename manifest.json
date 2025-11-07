@@ -1,0 +1,30 @@
+{
+  "name": "Counter Tester",
+  "id": "counter-test",
+  "version": "1.6.1",
+  "description": "A plugin to test Super Productivity's counter API methods: getAllCounters, getCounter, setCounter, incrementCounter, decrementCounter, plus full SimpleCounter CRUD.",
+  "author": "Mustache Dev",
+  "minSupVersion": "16.3.0",
+  "iFrame": false,
+  "permissions": [
+    "getAllCounters",
+    "getCounter",
+    "setCounter",
+    "incrementCounter",
+    "decrementCounter",
+    "getAllSimpleCounters",
+    "getSimpleCounter",
+    "updateSimpleCounter",
+    "toggleSimpleCounter",
+    "setSimpleCounterEnabled",
+    "deleteSimpleCounter",
+    "setSimpleCounterToday",
+    "setSimpleCounterDate",
+    "registerHeaderButton",
+    "uiInteraction",
+    "showSnack"
+  ],
+  "hooks": [
+    "action"
+  ]
+}
