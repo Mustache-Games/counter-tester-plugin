@@ -1,6 +1,8 @@
 # Counter Tester – Interactive Simple Counter API Debugger for Super Productivity
 
 [![Super Productivity Plugin](https://img.shields.io/badge/Super_Productivity-Plugin-blue.svg?logo=data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA2NCA2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNIDAuNjU1MzcwNDYsMzQuNTgyNzg3IDMyLjQ1MjI2Nyw2My44NTUzMDEgNjMuNzkxNTQ4LDAuOTQzNTY0MjIgMzAuMjIyNjQ0LDQ3LjcyMjAyMyBaIiBmaWxsPSJibGFjayIgZmlsbC1vcGFjaXR5PSIxIi8+PC9zdmc+)](https://super-productivity.com/)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-F16061.svg?logo=ko-fi&logoColor=white)](https://ko-fi.com/mustachegames)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-FFDD00.svg?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/MustacheGames)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **Counter Tester** is the ultimate real-time debugging console for Super Productivity’s **Simple Counters** system. Built specifically to verify the new counter API methods added in the pending [PR #5459](https://github.com/johannesjo/super-productivity/pull/5459) (fixing [#5398](https://github.com/johannesjo/super-productivity/issues/5398)), it gives developers and power users a floating, touch-friendly playground to exercise **every** counter method with zero setup.
