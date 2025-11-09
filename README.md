@@ -78,3 +78,9 @@ MIT © Mustache Dev – use, modify, ship it!
 ---
 
 **Happy testing!** This console survived hundreds of runs during #5398 development and is now the fastest way to confirm everything works before merge. Touch-friendly, streak-smart, and zero setup. Enjoy! 🚀
+
+---
+
+> As a game developer, I lack deep TypeScript/JavaScript expertise in this codebase.
+> As a student, I have limited time to properly learn new technologies.
+> This implementation was created with AI assistance to bridge these constraints.
