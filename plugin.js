@@ -262,7 +262,7 @@
     consoleUI.id = 'counter-tester-console';
     consoleUI.innerHTML = `
       <div class="console-header" style="padding:5px;background:#333;cursor:move;display:flex;justify-content:space-between;align-items:center;">
-        <h3>Counter Tester v1.6.1</h3>
+        <h3>Counter Tester v1.0.0</h3>
         <button class="console-toggle" onclick="toggleConsole()">${isConsoleVisible ? '−' : '+'}</button>
       </div>
       <div class="console-logs" style="flex:1;overflow-y:auto;padding:10px;background:#222;font-family:monospace;font-size:12px;"></div>
