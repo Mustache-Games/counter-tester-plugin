@@ -1,5 +1,5 @@
 mkdir -p dist
-cp manifest.json plugin.js dist/
+cp icon.svg manifest.json plugin.js dist/
 cd dist
 zip -r ../counter-tester.zip .
 cd ..

@@ -1,5 +1,3 @@
-// plugin.js - Enhanced Counter Tester v1.6.1: Complete Code with Type Inputs & Icon Swap
-
 (function() {
   'use strict';
 

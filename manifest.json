@@ -1,10 +1,13 @@
 {
   "name": "Counter Tester",
   "id": "counter-test",
-  "version": "1.6.1",
+  "version": "1.0.0",
   "description": "A plugin to test Super Productivity's counter API methods: getAllCounters, getCounter, setCounter, incrementCounter, decrementCounter, plus full SimpleCounter CRUD.",
+  "icon": "icon.svg",
   "author": "Mustache Dev",
+  "homepage": "https://github.com/Mustache-Games/Counter-Tester-Plugin",
   "minSupVersion": "16.3.0",
+  "manifestVersion": 1,
   "iFrame": false,
   "permissions": [
     "getAllCounters",
