@@ -94,7 +94,7 @@
     const streakInfo = c.isTrackStreaks ? `<br>Streak Min: ${c.type === 'StopWatch' ? formatTime(c.streakMinValue || 0) : c.streakMinValue || 0} (Days: ${Object.values(c.streakWeekDays || {}).filter(Boolean).length}/7)` : '';
     const durationInfo = (c.type === 'RepeatedCountdownReminder') ? `<br>Duration: ${formatTime(c.countdownDuration || 0)}` : '';
     const historyTable = renderCountOnDay(c.type, c.countOnDay);
-    const jsonDetails = `<details><summary>${c.id}: ${todayCount} ${streakInfo}${durationInfo} ${statusBadge}</summary><div>History: ${historyTable}</div><pre>${JSON.stringify(c, null, 2).slice(0, 500)}${JSON.stringify(c, null, 2).length > 500 ? '...' : ''}</pre></details>`;
+    const jsonDetails = `<details><summary>${c.title}(${c.id}): ${todayCount} ${streakInfo}${durationInfo} ${statusBadge}</summary><div>History: ${historyTable}</div><pre>${JSON.stringify(c, null, 2).slice(0, 500)}${JSON.stringify(c, null, 2).length > 500 ? '...' : ''}</pre></details>`;
     return `${typeBadge} ${isSelected ? '<strong>' : ''}${jsonDetails}${isSelected ? '</strong>' : ''}`;
   }
 
@@ -236,6 +236,16 @@
       .console-controls { padding: 8px; border-top: 1px solid #333; background: #2d2d2d; border-radius: 0 0 8px 8px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
       .console-controls button, .console-controls select, .console-controls input { background: #555; color: #fff; border: none; padding: 6px 8px; border-radius: 4px; cursor: pointer; font-size: 10px; }
       .console-controls button:hover { background: #666; } .console-controls button:active { background: #444; } .console-controls input { min-width: 60px; } .console-controls select { min-width: 140px; }
+      #get-full-btn:hover { background: #1e88e5 !important; } #get-full-btn:active { background: #1565c0 !important; }
+      #toggle-enabled-btn:hover { background: #fb8c00 !important; } #toggle-enabled-btn:active { background: #ef6c00 !important; }
+      #toggle-on-btn:hover { background: #fb8c00 !important; } #toggle-on-btn:active { background: #ef6c00 !important; }
+      #inc-btn:hover { background: #43a047 !important; } #inc-btn:active { background: #2e7d32 !important; }
+      #dec-btn:hover { background: #e53935 !important; } #dec-btn:active { background: #c62828 !important; }
+      #update-partial-btn:hover { background: #5e35b1 !important; } #update-partial-btn:active { background: #4527a0 !important; }
+      #set-today-btn:hover { background: #00796b !important; } #set-today-btn:active { background: #004d40 !important; }
+      #set-date-btn:hover { background: #00796b !important; } #set-date-btn:active { background: #004d40 !important; }
+      #delete-btn:hover { background: #e53935 !important; } #delete-btn:active { background: #c62828 !important; }
+      #full-btn:hover { background: #f4511e !important; } #full-btn:active { background: #d84315 !important; }
       #partial-modal input, #partial-modal label { display: block; width: 100%; margin-bottom: 10px; }
       
       @media (max-width: 768px) {
@@ -275,9 +285,9 @@
             <button id="dec-btn" onclick="runTest('dec')" style="display:none;flex:1;padding:5px;background:#f44336;color:#fff;border:none;border-radius:4px;cursor:pointer;">Dec (-Input)</button>
             <button id="update-partial-btn" onclick="runTest('updatePartial')" style="flex:1;padding:5px;background:#673ab7;color:#fff;border:none;border-radius:4px;cursor:pointer;">Edit</button>
             <button id="set-today-btn" onclick="runTest('setToday')" style="display:none;flex:1;padding:5px;background:#009688;color:#fff;border:none;border-radius:4px;cursor:pointer;">Set Today (Input)</button>
-            <button onclick="runTest('setDate')" style="flex:1;padding:5px;background:#009688;color:#fff;border:none;border-radius:4px;cursor:pointer;">Set Date (Input)</button>
-            <button onclick="runTest('delete')" style="flex:1;padding:5px;background:#f44336;color:#fff;border:none;border-radius:4px;cursor:pointer;">Delete</button>
-            <button onclick="runTest('full')" style="flex:1;padding:5px;background:#ff5722;color:#fff;border:none;border-radius:4px;cursor:pointer;">Full Suite</button>
+            <button id="set-date-btn" onclick="runTest('setDate')" style="flex:1;padding:5px;background:#009688;color:#fff;border:none;border-radius:4px;cursor:pointer;">Set Date (Input)</button>
+            <button id="delete-btn" onclick="runTest('delete')" style="flex:1;padding:5px;background:#f44336;color:#fff;border:none;border-radius:4px;cursor:pointer;">Delete</button>
+            <button id="full-btn" onclick="runTest('full')" style="flex:1;padding:5px;background:#ff5722;color:#fff;border:none;border-radius:4px;cursor:pointer;">Full Suite</button>
             <button onclick="clearLogs()">Clear</button>
           </div>
         </div>
@@ -623,7 +633,8 @@
       showMessage('Select first.', 'WARNING', 'warning');
       return;
     }
-    const confirm = window.confirm(`Delete ${testId}?`);
+    const selectedCounter = allCounters.find(c => c.id === testId);
+    const confirm = window.confirm(`Delete ${selectedCounter.title}(${testId})?`);
     if (!confirm) {
       appendToConsole('Cancelled.');
       return;
