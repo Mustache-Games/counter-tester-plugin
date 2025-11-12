@@ -4,6 +4,7 @@
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-F16061.svg?logo=ko-fi&logoColor=white)](https://ko-fi.com/mustachedev0)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-FFDD00.svg?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/MustacheGames)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![StandWithPalestine](https://raw.githubusercontent.com/TheBSD/StandWithPalestine/main/badges/StandWithPalestine.svg)](https://github.com/TheBSD/StandWithPalestine/blob/main/docs/README.md)
 
 **Counter Tester** is the ultimate real-time debugging console for Super Productivity’s **Simple Counters** system. Built specifically to verify the new counter API methods added in the pending [PR #5459](https://github.com/johannesjo/super-productivity/pull/5459) (fixing [#5398](https://github.com/johannesjo/super-productivity/issues/5398)), it gives developers and power users a floating, touch-friendly playground to exercise **every** counter method with zero setup.
 
@@ -15,6 +16,8 @@
 - **Advanced streak editor** – per-weekday checkboxes (Sun–Sat) that auto-show when “Track Streaks” is enabled  
 - One-click type-tailored test suite (creates → edits → deletes)  
 - Copyable logs + Material snacks  
+
+[![Stand With Palestine](https://raw.githubusercontent.com/TheBSD/StandWithPalestine/main/banner-no-action.svg)](https://thebsd.github.io/StandWithPalestine)
 
 **Important**: This plugin only works with the changes from the pending PR #5459.  
 To test it now, either:
