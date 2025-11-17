@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![StandWithPalestine](https://raw.githubusercontent.com/TheBSD/StandWithPalestine/main/badges/StandWithPalestine.svg)](https://github.com/TheBSD/StandWithPalestine/blob/main/docs/README.md)
 
-**Counter Tester** is the ultimate real-time debugging console for Super Productivity’s **Simple Counters** system. Built specifically to verify the new counter API methods added in the pending [PR #5459](https://github.com/johannesjo/super-productivity/pull/5459) (fixing [#5398](https://github.com/johannesjo/super-productivity/issues/5398)), it gives developers and power users a floating, touch-friendly playground to exercise **every** counter method with zero setup.
+**Counter Tester** is the ultimate real-time debugging console for Super Productivity’s **Simple Counters** system. Built specifically to verify the new counter API methods added in the now-merged [PR #5459](https://github.com/johannesjo/super-productivity/pull/5459) (fixing [#5398](https://github.com/johannesjo/super-productivity/issues/5398)), it gives developers and power users a floating, touch-friendly playground to exercise **every** counter method with zero setup.
 
 - Flat key shortcuts (`setCounter`, `inc/dec`)  
 - Full entity CRUD (`updateSimpleCounter`, `setSimpleCounterDate`, `toggleSimpleCounter`…)  
@@ -19,12 +19,10 @@
 
 [![Stand With Palestine](https://raw.githubusercontent.com/TheBSD/StandWithPalestine/main/banner-no-action.svg)](https://thebsd.github.io/StandWithPalestine)
 
-**Important**: This plugin only works with the changes from the pending PR #5459.  
-To test it now, either:
-- Clone and build Super Productivity from the fork: https://github.com/Mustache-Games/super-productivity/tree/master  
-- Or manually apply the PR changes to your local build  
-
-Once #5459 is merged, it will work in the official release without any extra steps.
+**Important**: This plugin works with the merged changes from PR #5459.  
+To test it now:  
+- Use the staging build at https://test-app.super-productivity.com (plugins enabled in Settings)  
+Once released in the next official version, it will work in the stable app without extra steps.
 
 ## Feature Highlights
 
@@ -67,12 +65,12 @@ All changes instantly reflect in **Settings → Simple Counters**.
 ## Related Links
 
 - Issue: [#5398 – Add simple counter methods to PluginAPI](https://github.com/johannesjo/super-productivity/issues/5398)  
-- PR (pending merge): [#5459 – feat(plugin-api): simple counters + full CRUD](https://github.com/johannesjo/super-productivity/pull/5459)  
+- PR (merged): [#5459 – feat(plugin-api): simple counters + full CRUD](https://github.com/johannesjo/super-productivity/pull/5459)  
 
 ## Contributing
 
 Found something off? Want CSV export or counter creation UI?  
-→ Open an issue or PR – especially welcome while the PR is under review!
+→ Open an issue or PR – especially welcome post-merge!
 
 ## License
 
@@ -80,10 +78,10 @@ MIT © Mustache Dev – use, modify, ship it!
 
 ---
 
-**Happy testing!** This console survived hundreds of runs during #5398 development and is now the fastest way to confirm everything works before merge. Touch-friendly, streak-smart, and zero setup. Enjoy! 🚀
+**Happy testing!** This console survived hundreds of runs during #5398 development and is now the fastest way to confirm everything works in staging. Touch-friendly, streak-smart, and zero setup. Enjoy! 🚀
 
 ---
 
-> As a game developer, I lack deep TypeScript/JavaScript expertise in this codebase.
-> As a student, I have limited time to properly learn new technologies.
+> As a game developer, I lack deep TypeScript/JavaScript expertise in this codebase.  
+> As a student, I have limited time to properly learn new technologies.  
 > This implementation was created with AI assistance to bridge these constraints.
